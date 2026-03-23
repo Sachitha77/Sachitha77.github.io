@@ -1,0 +1,165 @@
+/* ===== Global Style ===== */
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    color: #222;
+    background: #f7f7f7;
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    color: #111;
+}
+
+section {
+    padding: 60px 20px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+/* ===== Navigation ===== */
+header {
+    background: #fff;
+    border-bottom: 1px solid #ddd;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+}
+
+.logo {
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+/* ===== Mobile Menu ===== */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger span {
+    background: #333;
+    height: 3px;
+    width: 25px;
+    margin: 3px 0;
+}
+
+/* ===== Hero Section ===== */
+.hero {
+    background: #0b3954;
+    color: white;
+    padding: 120px 20px;
+    text-align: center;
+}
+
+.btn-primary {
+    background: #1f78d1;
+    color: #fff;
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 15px;
+}
+
+/* ===== About Section ===== */
+.tools {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.tools li {
+    background: #e0e0e0;
+    padding: 6px 12px;
+    border-radius: 4px;
+}
+
+/* ===== Skills ===== */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+/* ===== Projects ===== */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.project-card {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.project-card img {
+    width: 100%;
+    border-radius: 6px;
+}
+
+/* ===== Timeline ===== */
+.timeline-item {
+    border-left: 3px solid #1f78d1;
+    padding-left: 15px;
+    margin-bottom: 20px;
+}
+
+/* ===== Contact ===== */
+.contact a {
+    color: #1f78d1;
+    text-decoration: none;
+}
+
+/* ===== Responsive Breakpoints ===== */
+
+@media (max-width: 900px) {
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 700px) {
+
+    /* Mobile nav menu */
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background: white;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        padding: 15px;
+        border: 1px solid #ccc;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+}
